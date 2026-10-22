@@ -1,23 +1,103 @@
 aid: qube-holdings
+
 name: Qube Holdings
-description: 'Qube Holdings is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Qube Holdings is Australia's largest integrated provider of import and export logistics services, operating across
+  Australia, New Zealand and South-East Asia with a workforce of around 10,000 employees. Its Operating Division comprises
+  Qube Logistics and Qube Ports and Bulk, and it holds a 50 per cent interest in Patrick Terminals, Australia's leading container
+  terminal operator. Formerly ASX-listed (Qube Holdings LTD), Qube is now a private company majority-owned by a Macquarie
+  Asset Management-led consortium including UniSuper and Pontegadea. Customers interact through login-gated web portals (Services
+  Portal, Gateway, Global Track & Trace); no public developer API documentation was found on its sites.
+
 url: https://raw.githubusercontent.com/api-evangelist/qube-holdings/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Logistics
+- Ports
+- Stevedoring
+- Supply Chain
+- Freight
+- Australia
+- Transportation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://qube.com.au/wp-content/uploads/2024/02/logo-qube.svg
+
 common:
+- type: WellKnown
+  url: well-known/qube-holdings-well-known.yml
+- type: Hosts
+  url: hosts/qube-holdings-hosts.yml
+- type: Vendors
+  url: vendors/qube-holdings-vendors.yml
 - type: Website
   url: https://qube.com.au/
+- type: DomainSecurity
+  url: security/qube-holdings-domain-security.yml
+- type: Login
+  url: https://portal.qube.com.au/
+- type: Login
+  url: https://gateway.qube.com.au/
+- type: Newsroom
+  url: https://qube.com.au/news/
+- type: Support
+  url: https://qube.com.au/contact/
+- type: Investors
+  url: https://qube.com.au/investor/
+- type: Sustainability
+  url: https://qube.com.au/sustainability/
+- type: Careers
+  url: https://careers.qube.com.au/
+- type: TermsOfService
+  url: https://qube.com.au/about/standard-terms-for-provision-of-services/
+- type: PrivacyPolicy
+  url: https://qube.com.au/privacy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/qube-holdings/
+- type: Instagram
+  url: https://www.instagram.com/qubeholdings/
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Preflight recorded a 403 bot-challenge on qube.com.au, but a browser-UA GET on 2026-10-22 returned 200 with title
+    "Qube Holdings LTD | Australia's largest Logistics Provider"; identity and pointers read from the live site. Sibling hosts
+    portal/gateway/globaltt are customer login portals, not developer portals; no public API docs found.
+  evidence:
+  - url: https://qube.com.au/
+    status: 200
+  - url: https://qube.com.au/about/
+    status: 200
+  - url: https://portal.qube.com.au/
+    status: 200
+  - url: https://gateway.qube.com.au/
+    status: 200
+  - url: https://globaltt.qube.com.au/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 12
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

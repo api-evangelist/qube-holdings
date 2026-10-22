@@ -1,0 +1,21 @@
+generated: '2026-10-22'
+method: none
+source:
+- https://zapier.com/apps/qube-holdings/integrations
+- https://n8n.io/integrations/qube-holdings/
+- https://composio.dev/toolkits/qube-holdings
+- https://monid.ai/tools/qube-holdings
+checked:
+- https://qube.com.au/ (403 bot-challenge per pre-flight)
+- https://zapier.com/apps/qube/integrations (404)
+- https://n8n.io/integrations/qube/ (404)
+- https://composio.dev/toolkits/qube-holdings
+- https://monid.ai/tools/qube-holdings
+- https://n8n.io/integrations/qube-holdings/
+- https://zapier.com/apps/qube-holdings/integrations
+summary: No public integrations, partner directory or marketplace listing was found. The corporate site qube.com.au
+  refuses automated reads with a 403 bot-challenge, and there is no OpenAPI, AsyncAPI or MCP contract in the repo
+  to derive contract edges from.
+marketplace_apps: []
+edges: []
+templates: []

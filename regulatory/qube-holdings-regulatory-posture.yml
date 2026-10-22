@@ -1,0 +1,85 @@
+generated: '2026-10-22'
+method: searched
+source: https://qube.com.au/privacy/
+note: >-
+  Qube Holdings is an Australian logistics and infrastructure group, not an API vendor. Its posture comes
+  from its Privacy Policy (https://qube.com.au/privacy/, HTTP 200). The Standard Terms for Provision of
+  Services page (https://qube.com.au/about/standard-terms-for-provision-of-services/, HTTP 200) yielded no
+  regulatory signal candidates. The homepage returned 403 to a browser user-agent during pre-flight, but
+  both legal pages were readable.
+signals:
+  data_subject_request:
+    url: https://qube.com.au/privacy/
+    section: '13. Access and correction of personal information'
+    channel: Privacy Officer, in writing (email or post to Level 27, 45 Clarence Street, Sydney NSW 2000)
+    rights_named: [access, correction]
+    evidence:
+    - source: https://qube.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: You may seek access to access or correct the personal information Qube holds about you.
+    - source: https://qube.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: We will generally grant you access to personal information if you request it, but we may refuse to do so if we are permitted or required by law to do so.
+    - source: https://qube.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: We will process requests for access within a reasonable time.
+    note: >-
+      Access and correction rights under the Australian and New Zealand privacy laws, made through a named Privacy
+      Officer. There is no fixed deadline ("within a reasonable time"), and the policy does not name deletion
+      or portability rights.
+  data_retention:
+    url: https://qube.com.au/privacy/
+    section: Retention of data
+    evidence:
+    - source: https://qube.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: We will take reasonable steps to permanently de-identify or destroy personal information when it is no longer required for any purpose for which it was collected.
+    - source: https://qube.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: Biometric and photographic data of each activity is automatically destroyed after 60 days;
+    - source: https://qube.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: Video footage is retained on average for 15 days.
+    note: >-
+      The general rule is to destroy or de-identify data once it is no longer needed, with an exception for
+      records kept for legal, accounting, insurance or prudential purposes. Facial-recognition data has
+      specific periods: 60 days for biometric and photographic data, and about 15 days on average for video
+      footage.
+  incident_notification:
+    url: https://qube.com.au/privacy/
+    section: Notifiable Data Breaches
+    evidence:
+    - source: https://qube.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: The Notifiable Data Breaches Scheme in Australia requires Qube to notify the OAIC and affected individuals where there has been an eligible data breach in relation to the individual’s personal information.
+    - source: https://qube.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: Qube Logistics (Vic) Pty Limited, as a responsible entity for a critical infrastructure asset, also has reporting obligations under the Security of Critical Infrastructure Act 2018 (Cth) to notify the Australian Cyber Security Centre in accordance with that Act.
+    note: >-
+      The policy acknowledges breach notification duties to regulators and affected individuals: the OAIC
+      under the Australian NDB scheme, the NZ Privacy Commissioner, and the ACSC under the SOCI Act. It says
+      Qube has a Data Breach Response Plan but gives no customer-facing notification timeline.
+  data_residency:
+    url: https://qube.com.au/privacy/
+    section: '10. Disclosure of personal information outside Australia or New Zealand'
+    evidence:
+    - source: https://qube.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: Qube may share personal information with members of the Qube group who are located in Singapore, Papua New Guinea, Malaysia, India and China.
+    - source: https://qube.com.au/privacy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: All data, including metadata, is stored and encrypted in disparate cloud systems for 60 days on our FRT provider’s Australian platform;
+    note: >-
+      This is a cross-border transfer disclosure, not a residency guarantee. Personal information may go to
+      group entities in five named countries and to overseas service providers. Only facial-recognition data
+      is stated to be held on an Australian platform.

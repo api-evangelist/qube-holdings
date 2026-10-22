@@ -1,0 +1,20 @@
+generated: '2026-10-22'
+method: none
+status: none
+note: >-
+  No official hosted or local MCP server for Qube Holdings was found, and no public OpenAPI exists in this repo from
+  which to derive a candidate tool list. Preflight (2026-10-22) recorded https://portal.qube.com.au/api/mcp answering
+  401 with a control path also answering 401 (verdict opaque: the edge authenticates before it routes), which proves
+  nothing about an MCP server; the path is not documented or advertised by Qube and was not called further. A web
+  search for a Qube developer API / MCP server (2026-10-22) returned only unrelated third-party logistics MCP servers.
+evidence:
+- url: https://portal.qube.com.au/api/mcp
+  status: 401
+  note: opaque (control path also 401); undocumented, not an advertised MCP endpoint
+- url: https://portal.qube.com.au/llms.txt
+  status: 404
+tools: []
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched

@@ -1,0 +1,153 @@
+generated: '2026-10-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 12
+  own: 8
+  other_domain: 3
+  platform: 1
+  roles:
+  - api
+  - identity
+  - marketing
+  - other
+  - website
+hosts:
+- host: api.com.au
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: api.com.au
+  role: api
+  relation: other-domain
+- host: api.instagram.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: instagram.com
+  role: api
+  relation: other-domain
+- host: careers.qube.com.au
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Careers
+  serves: []
+  registrable_domain: qube.com.au
+  role: marketing
+  relation: own
+- host: connect.qube.com.au
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: qube.com.au
+  role: other
+  relation: own
+- host: containers.anvil.qube.com.au
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: qube.com.au
+  role: other
+  relation: own
+- host: fremantle.anvil.qube.com.au
+  found_by:
+  - probed
+  - site-links
+  types: []
+  serves: []
+  registrable_domain: qube.com.au
+  role: other
+  relation: own
+- host: gateway.qube.com.au
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  serves: []
+  registrable_domain: qube.com.au
+  role: identity
+  relation: own
+- host: globaltt.qube.com.au
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: qube.com.au
+  role: other
+  relation: own
+- host: portal.qube.com.au
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  serves:
+  - docs
+  registrable_domain: qube.com.au
+  role: identity
+  relation: own
+- host: qube.com.au
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - Newsroom
+  - Support
+  - Investors
+  - Sustainability
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: qube.com.au
+  role: website
+  relation: own
+- host: www.instagram.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - Instagram
+  serves: []
+  registrable_domain: instagram.com
+  role: other
+  relation: other-domain
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform

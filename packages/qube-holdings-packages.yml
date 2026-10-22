@@ -1,0 +1,8 @@
+generated: '2026-10-22'
+method: none
+note: No first-party SDK or client library found. npm package qube-logistics and PyPI qube-holdings return 404; npm search for "qube.com.au" returns 0 results; a web search found no Qube developer documentation. Qube's site (qube.com.au) answers 403 bot-challenge, and its customer surfaces (portal.qube.com.au, gateway.qube.com.au) are login-gated.
+checked:
+- https://registry.npmjs.org/qube-logistics (404)
+- https://pypi.org/pypi/qube-holdings/json (404)
+- https://registry.npmjs.org/-/v1/search?text=qube.com.au (200, total 0)
+packages: []
